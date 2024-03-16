@@ -16,11 +16,15 @@ taskipy = "^1.12.2"
 black = "^24.3.0"
 isort = "^5.13.2"
 pytest = "^8.1.1"
-python-coinmarketcap = "^0.5"
 yfinance = "^0.2.37"
 wbdata = "^1.0.0"
+pandas = "^2.2.1"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run = "poetry run python app/extract.py"
+
